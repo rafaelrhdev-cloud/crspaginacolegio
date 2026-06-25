@@ -68,29 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pts=Array.from({length:55},(_,i)=>new Particle(i<25));
   (function render(){ ctx.clearRect(0,0,canvas.width,canvas.height); pts.forEach(p=>{p.update();p.draw();}); requestAnimationFrame(render); })();
 
-  /* ── BIRRETES (fixed, toda la página) ────────────── */
-  function spawnCap(){
-    const cap=document.createElement('div');
-    const sx=Math.random()*innerWidth;
-    const size=Math.random()*18+14;
-    const dur=Math.random()*6+7;
-    const rotEnd=(Math.random()>.5?1:-1)*(Math.random()*280+100);
-    const drift=(Math.random()-.5)*110;
-    cap.textContent='🎓';
-    Object.assign(cap.style,{position:'fixed',top:'-50px',left:sx+'px',fontSize:size+'px',opacity:'0',zIndex:'3',pointerEvents:'none',willChange:'transform,opacity'});
-    document.body.appendChild(cap);
-    const t0=performance.now(), dist=innerHeight+80;
-    (function fall(now){
-      const p=(now-t0)/1000/dur;
-      if(p>=1){cap.remove();return;}
-      const e=p*p*.3+p*.7;
-      cap.style.opacity=p<.1?p/.1*.75:p>.85?(1-p)/.15*.75:.75;
-      cap.style.transform=`translate(${e*drift}px,${-50+e*dist}px) rotate(${e*rotEnd}deg)`;
-      requestAnimationFrame(fall);
-    })(performance.now());
-  }
-  for(let i=0;i<10;i++) setTimeout(spawnCap,i*350);
-  setInterval(spawnCap,1500);
+  /* Birretes eliminados — página institucional */
 
   /* ── NAV ──────────────────────────────────────────── */
   const nav=document.getElementById('nav');
@@ -176,15 +154,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function catLabel(c){return{cultural:'Cultural',deportes:'Deportes',academico:'Académico',graduacion:'Graduación'}[c]||c;}
 
-  // Filtros
+  // Filtros con animación
   document.querySelectorAll('.filter-btn').forEach(btn=>{
     btn.addEventListener('click',()=>{
       document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
       const f=btn.dataset.filter;
-      document.querySelectorAll('.gallery-item').forEach(item=>{
-        item.classList.toggle('hidden',f!=='all'&&item.dataset.cat!==f);
+      const items=document.querySelectorAll('.gallery-item');
+
+      // Primero fade-out todo
+      items.forEach(item=>{
+        item.classList.add('gallery-exiting');
       });
+
+      setTimeout(()=>{
+        items.forEach(item=>{
+          const show=f==='all'||item.dataset.cat===f;
+          item.classList.remove('gallery-exiting');
+          if(show){
+            item.classList.remove('hidden');
+            // Stagger de entrada
+            const visibles=[...document.querySelectorAll('.gallery-item:not(.hidden)')];
+            const idx=visibles.indexOf(item);
+            item.style.transitionDelay=(idx*55)+'ms';
+            item.classList.add('gallery-entering');
+            requestAnimationFrame(()=>requestAnimationFrame(()=>{
+              item.classList.remove('gallery-entering');
+            }));
+          } else {
+            item.classList.add('hidden');
+            item.style.transitionDelay='0ms';
+          }
+        });
+      }, 220);
     });
   });
 

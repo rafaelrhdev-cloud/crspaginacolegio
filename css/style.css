@@ -151,6 +151,60 @@ img{display:block;max-width:100%}
 .gallery-note code{background:rgba(201,168,76,.1);color:var(--gold);padding:2px 6px;border-radius:4px;font-size:.7rem}
 .gallery-item.hidden{display:none}
 
+/* Animación de filtro */
+.gallery-item{
+  transition: opacity .22s ease, transform .22s ease, filter .22s ease;
+}
+.gallery-item.gallery-exiting{
+  opacity:0;
+  transform:scale(.92) translateY(8px);
+  filter:blur(2px);
+  pointer-events:none;
+}
+.gallery-item.gallery-entering{
+  opacity:0;
+  transform:scale(.92) translateY(12px);
+  filter:blur(2px);
+}
+/* El estado normal (visible) es la transición de vuelta */
+.gallery-item:not(.gallery-exiting):not(.gallery-entering):not(.hidden){
+  opacity:1;
+  transform:scale(1) translateY(0);
+  filter:blur(0);
+}
+
+/* Colaboradores clicables */
+.colab-link{
+  cursor:pointer;
+  position:relative;
+}
+.colab-link:hover{
+  border-color:var(--gold)!important;
+  background:rgba(201,168,76,.1)!important;
+  transform:translateY(-4px);
+  box-shadow:0 12px 32px rgba(201,168,76,.15);
+}
+.colab-link:hover .colab-label{ color:var(--gold-light); }
+.colab-link:hover .colab-placeholder-icon svg{ stroke:var(--gold); }
+.colab-arrow{
+  font-size:.9rem;
+  color:var(--gold);
+  opacity:0;
+  transform:translateY(4px);
+  transition:all .28s;
+  margin-top:-4px;
+}
+.colab-link:hover .colab-arrow{
+  opacity:1;
+  transform:translateY(0);
+}
+.colab-add{cursor:pointer;}
+.colab-add:hover{
+  border-color:rgba(201,168,76,.3)!important;
+  background:rgba(201,168,76,.05)!important;
+  transform:translateY(-3px);
+}
+
 /* ══ LIGHTBOX ═════════════════════════════════════════════ */
 .lightbox-overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(8px);z-index:2000;opacity:0;pointer-events:none;transition:opacity .35s}
 .lightbox-overlay.active{opacity:1;pointer-events:all}
