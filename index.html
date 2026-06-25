@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colegio Real de Santiago – Plantel San Juan del Río</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700;900&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- PARTÍCULAS -->
+  <canvas id="particles"></canvas>
+
+  <!-- CURSOR -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ══ NAV ══════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <img src="assets/logo.png" alt="Colegio Real" class="nav-logo-img"/>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Colegio Real de Santiago</span>
+        <span class="nav-logo-plantel">Plantel San Juan del Río</span>
+      </div>
+    </div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#inicio"        class="nav-link">Inicio</a></li>
+      <li><a href="#planteles"     class="nav-link">Planteles</a></li>
+      <li><a href="#acerca"        class="nav-link">Acerca de</a></li>
+      <li><a href="#eventos"       class="nav-link">Eventos</a></li>
+      <li><a href="#reglamentos"   class="nav-link">Reglamentos</a></li>
+      <li><a href="#costos"        class="nav-link">Costos</a></li>
+      <li><a href="#vacantes"      class="nav-link">Vacantes</a></li>
+      <li><a href="#colaboradores" class="nav-link">Colaboradores</a></li>
+      <li><a href="#contacto"      class="nav-link nav-cta">Contacto</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ══ HERO ══════════════════════════════════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Arcos decorativos -->
+    <div class="hero-arc hero-arc-1"></div>
+    <div class="hero-arc hero-arc-2"></div>
+    <div class="hero-arc hero-arc-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-emblem reveal-hero">
+        <div class="emblem-ring">
+          <div class="emblem-core">
+            <img src="assets/logo.png" alt="Logo Colegio Real"/>
+          </div>
+        </div>
+      </div>
+
+      <p class="hero-eyebrow reveal-hero" style="--d:.2s">Plantel San Juan del Río</p>
+      <h1 class="hero-title reveal-hero" style="--d:.4s">
+        <span>Colegio Real</span>
+        <span class="hero-title-gold">de Santiago</span>
+      </h1>
+      <p class="hero-tagline reveal-hero" style="--d:.6s">
+        Formando líderes con valores, excelencia académica y visión de futuro.
+      </p>
+
+      <div class="hero-actions reveal-hero" style="--d:.8s">
+        <a href="#acerca" class="btn btn-gold">Conócenos</a>
+        <a href="#contacto" class="btn btn-outline">Inscríbete ahora</a>
+      </div>
+
+      <div class="hero-stats reveal-hero" style="--d:1s">
+        <div class="stat">
+          <span class="stat-num" data-target="25">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Años de experiencia</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="800">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Alumnos activos</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="60">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Docentes certificados</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Explorar</span>
+    </div>
+  </section>
+
+  <!-- ══ PLANTELES ═════════════════════════════════════ -->
+  <section class="section" id="planteles">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag">Nuestra red</span>
+        <h2 class="section-title">Nuestros <span class="gold">Planteles</span></h2>
+        <p class="section-sub">Dos sedes comprometidas con la excelencia educativa en el estado de Querétaro.</p>
+      </div>
+
+      <div class="planteles-grid">
+        <!-- San Juan del Río — PRINCIPAL -->
+        <div class="plantel-card plantel-main reveal">
+          <div class="plantel-badge">Sede Principal</div>
+          <div class="plantel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+              <path d="M9 21V12h6v9"/>
+            </svg>
+          </div>
+          <h3>Plantel San Juan del Río</h3>
+          <p>Nuestra sede principal, con instalaciones modernas, laboratorios, biblioteca y espacios deportivos de primer nivel.</p>
+          <ul class="plantel-features">
+            <li><svg viewBox="0 0 16 16"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Preescolar, Primaria y Secundaria</li>
+            <li><svg viewBox="0 0 16 16"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Laboratorio de Cómputo</li>
+            <li><svg viewBox="0 0 16 16"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Canchas deportivas</li>
+            <li><svg viewBox="0 0 16 16"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Biblioteca digital</li>
+            <li><svg viewBox="0 0 16 16"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Comedor escolar</li>
+          </ul>
+          <a href="#contacto" class="btn btn-gold">Más información</a>
+        </div>
+
+        <!-- Querétaro -->
+        <div class="plantel-card reveal">
+          <div class="plantel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+              <path d="M9 21V12h6v9"/>
+            </svg>
+          </div>
+          <h3>Plantel Querétaro</h3>
+          <p>Nuestra sede en la capital del estado, con el mismo nivel académico y valores que nos distinguen como institución.</p>
+          <ul class="plantel-features">
+            <li><svg viewBox="0 0 16 16"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>Preescolar, Primaria y Secundaria</li>
+            <li><svg viewBox="0 0 16 16"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Aulas equipadas</li>
+            <li><svg viewBox="0 0 16 16"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Actividades extracurriculares</li>
+            <li><svg viewBox="0 0 16 16"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Formación en valores</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline">Más información</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ACERCA DE ══════════════════════════════════════ -->
+  <section class="section section-alt" id="acerca">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag">Quiénes somos</span>
+        <h2 class="section-title">Acerca de <span class="gold">Nosotros</span></h2>
+      </div>
+
+      <div class="acerca-grid">
+        <div class="acerca-text reveal">
+          <p class="acerca-lead">El Colegio Real de Santiago es una institución educativa privada con más de 25 años formando generaciones de estudiantes en Querétaro.</p>
+          <p>Nuestra propuesta pedagógica combina la excelencia académica con una sólida formación en valores, preparando a nuestros alumnos para los retos del mundo moderno con responsabilidad, liderazgo y sentido comunitario.</p>
+          <p>En el Plantel San Juan del Río contamos con un equipo docente altamente capacitado, instalaciones modernas y un ambiente de respeto y convivencia que hace de cada día una experiencia de aprendizaje significativo.</p>
+          <div class="acerca-values">
+            <div class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>
+              Excelencia
+            </div>
+            <div class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              Valores
+            </div>
+            <div class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              Compromiso
+            </div>
+            <div class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              Comunidad
+            </div>
+          </div>
+        </div>
+
+        <div class="acerca-cards reveal">
+          <div class="mv-card">
+            <div class="mv-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h4>Misión</h4>
+            <p>Brindar educación de calidad que forme personas íntegras, capaces de contribuir positivamente a la sociedad con conocimiento, valores y actitud de servicio.</p>
+          </div>
+          <div class="mv-card mv-card-gold">
+            <div class="mv-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h4>Visión</h4>
+            <p>Ser la institución educativa privada de mayor referencia en Querétaro, reconocida por la excelencia académica y la formación integral de sus egresados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EVENTOS / GALERÍA ═════════════════════════════ -->
+  <section class="section" id="eventos">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag">Vida escolar</span>
+        <h2 class="section-title">Eventos y <span class="gold">Galería</span></h2>
+        <p class="section-sub">Momentos que definen nuestra comunidad escolar.</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="gallery-filters reveal">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="deportes">Deportes</button>
+        <button class="filter-btn" data-filter="cultural">Cultural</button>
+        <button class="filter-btn" data-filter="academico">Académico</button>
+        <button class="filter-btn" data-filter="graduacion">Graduación</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Las tarjetas de galería se generan con JS para mantener el HTML limpio -->
+      </div>
+
+      <p class="gallery-note reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Agrega tus fotos reales en la carpeta <code>img/eventos/</code> y actualiza el arreglo en <code>js/main.js</code>.
+      </p>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev">‹</button>
+    <button class="lightbox-next" id="lightboxNext">›</button>
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt=""/>
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+  <div class="lightbox-overlay" id="lightboxOverlay"></div>
+
+  <!-- ══ REGLAMENTOS ════════════════════════════════════ -->
+  <section class="section section-alt" id="reglamentos">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag">Normatividad</span>
+        <h2 class="section-title">Reglamentos <span class="gold">Escolares</span></h2>
+        <p class="section-sub">Conoce las normas que rigen nuestra comunidad educativa.</p>
+      </div>
+
+      <div class="accordion" id="accordion">
+
+        <div class="acc-item reveal">
+          <button class="acc-header">
+            <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></span>
+            Reglamento General de Conducta
+            <span class="acc-arrow">›</span>
+          </button>
+          <div class="acc-body">
+            <p>Los alumnos deberán mantener en todo momento una conducta respetuosa hacia compañeros, docentes y personal administrativo. Se prohíbe el uso de lenguaje ofensivo, la violencia física o verbal y cualquier forma de acoso escolar.</p>
+            <ul>
+              <li>Uso del uniforme completo y en buen estado obligatorio.</li>
+              <li>Puntualidad en el ingreso a clases y actividades.</li>
+              <li>Respeto a las instalaciones y material escolar.</li>
+              <li>Prohibido el uso de dispositivos móviles en horario de clases.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-item reveal">
+          <button class="acc-header">
+            <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            Reglamento de Asistencia y Puntualidad
+            <span class="acc-arrow">›</span>
+          </button>
+          <div class="acc-body">
+            <p>La asistencia regular es fundamental para el proceso de aprendizaje. Los padres de familia deberán justificar las inasistencias en un plazo no mayor a 3 días hábiles.</p>
+            <ul>
+              <li>Tolerancia máxima de 10 minutos para el ingreso.</li>
+              <li>Más de 3 retardos equivalen a 1 falta injustificada.</li>
+              <li>El 20% de faltas puede resultar en baja automática.</li>
+              <li>Las inasistencias justificadas deben reportarse vía comunicado oficial.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-item reveal">
+          <button class="acc-header">
+            <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></span>
+            Reglamento Académico y de Evaluación
+            <span class="acc-arrow">›</span>
+          </button>
+          <div class="acc-body">
+            <p>El proceso de evaluación es continuo e integral, tomando en cuenta participación, tareas, proyectos y exámenes parciales y finales.</p>
+            <ul>
+              <li>Calificación mínima aprobatoria: 6.0</li>
+              <li>Los exámenes de recuperación se aplican en fecha establecida por la coordinación.</li>
+              <li>Se prohíbe el plagio o copia en cualquier evaluación.</li>
+              <li>Las boletas se entregan en reunión bimestral de padres de familia.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-item reveal">
+          <button class="acc-header">
+            <span class="acc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></span>
+            Reglamento para Padres de Familia
+            <span class="acc-arrow">›</span>
+          </button>
+          <div class="acc-body">
+            <p>Los padres de familia son aliados fundamentales del proceso educativo. Su participación activa y respetuosa contribuye al éxito de los alumnos.</p>
+            <ul>
+              <li>Asistencia obligatoria a reuniones bimestrales.</li>
+              <li>Canalizar dudas y quejas a través de la coordinación académica.</li>
+              <li>Pago puntual de mensualidades según calendario escolar.</li>
+              <li>Respeto al personal docente y administrativo en todo momento.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ COSTOS ═════════════════════════════════════════ -->
+  <section class="section" id="costos">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag">Inversión educativa</span>
+        <h2 class="section-title">Costos de <span class="gold">Inscripción</span></h2>
+        <p class="section-sub">Planes accesibles para que la excelencia educativa esté al alcance de tu familia.</p>
+      </div>
+
+      <div class="costos-grid">
+
+        <div class="costo-card reveal">
+          <div class="costo-nivel">Primaria</div>
+          <div class="costo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          </div>
+          <div class="costo-precio">
+            <span class="costo-desde">Desde</span>
+            <span class="costo-monto">Consultar</span>
+          </div>
+          <ul class="costo-incluye">
+            <li>Inscripción anual</li>
+            <li>Seguro escolar</li>
+            <li>Material didáctico base</li>
+            <li>Acceso a instalaciones</li>
+            <li>Actividades extracurriculares</li>
+          </ul>
+          <a href="#contacto" class="btn btn-gold">Solicitar información</a>
+        </div>
+
+        <div class="costo-card costo-featured reveal">
+          <div class="costo-badge">Más solicitado</div>
+          <div class="costo-nivel">Secundaria</div>
+          <div class="costo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="costo-precio">
+            <span class="costo-desde">Desde</span>
+            <span class="costo-monto">Consultar</span>
+          </div>
+          <ul class="costo-incluye">
+            <li>Inscripción anual</li>
+            <li>Seguro escolar</li>
+            <li>Laboratorio de cómputo</li>
+            <li>Biblioteca digital</li>
+            <li>Orientación vocacional</li>
+            <li>Actividades culturales y deportivas</li>
+          </ul>
+          <a href="#contacto" class="btn btn-gold">Solicitar información</a>
+        </div>
+
+        <div class="costo-card reveal">
+          <div class="costo-nivel">Preescolar</div>
+          <div class="costo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <div class="costo-precio">
+            <span class="costo-desde">Hasta</span>
+            <span class="costo-monto">15% off</span>
+          </div>
+          <ul class="costo-incluye">
+            <li>Hermanos inscritos</li>
+            <li>Pago anual adelantado</li>
+            <li>Pronto pago de inscripción</li>
+            <li>Alumnos con promedio 9+</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline">Más información</a>
+        </div>
+
+      </div>
+
+      <p class="costos-nota reveal">
+        Los costos exactos varían según el ciclo escolar y el nivel educativo. Contáctanos para recibir una propuesta personalizada.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══ VACANTES ═══════════════════════════════════════ -->
+  <section class="section section-alt" id="vacantes">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag">Únete al equipo</span>
+        <h2 class="section-title">Vacantes <span class="gold">Disponibles</span></h2>
+        <p class="section-sub">Buscamos profesionales apasionados por la educación para formar parte de nuestra familia.</p>
+      </div>
+
+      <div class="vacantes-grid">
+
+        <div class="vacante-card reveal">
+          <div class="vacante-dept">Académico</div>
+          <h3 class="vacante-title">Docente de Matemáticas</h3>
+          <p class="vacante-desc">Nivel secundaria. Se requiere titulado en área afín, experiencia mínima 2 años en educación básica.</p>
+          <div class="vacante-tags">
+            <span>Tiempo completo</span>
+            <span>Presencial</span>
+            <span>San Juan del Río</span>
+          </div>
+          <a href="#contacto" class="btn btn-sm btn-gold">Postularme</a>
+        </div>
+
+        <div class="vacante-card reveal">
+          <div class="vacante-dept">Académico</div>
+          <h3 class="vacante-title">Docente de Inglés</h3>
+          <p class="vacante-desc">Nivel primaria y secundaria. Certificación de inglés nivel B2 o superior. Experiencia docente deseable.</p>
+          <div class="vacante-tags">
+            <span>Tiempo completo</span>
+            <span>Presencial</span>
+            <span>San Juan del Río</span>
+          </div>
+          <a href="#contacto" class="btn btn-sm btn-gold">Postularme</a>
+        </div>
+
+        <div class="vacante-card reveal">
+          <div class="vacante-dept">Administrativo</div>
+          <h3 class="vacante-title">Auxiliar Administrativo</h3>
+          <p class="vacante-desc">Apoyo en control escolar, atención a padres de familia y manejo de sistema administrativo interno.</p>
+          <div class="vacante-tags">
+            <span>Medio tiempo</span>
+            <span>Presencial</span>
+            <span>San Juan del Río</span>
+          </div>
+          <a href="#contacto" class="btn btn-sm btn-gold">Postularme</a>
+        </div>
+
+        <div class="vacante-card vacante-open reveal">
+          <div class="vacante-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+          </div>
+          <h3>¿No ves tu perfil?</h3>
+          <p>Envíanos tu CV y cuéntanos cómo puedes contribuir a nuestra comunidad educativa. Siempre estamos abiertos al talento.</p>
+          <a href="#contacto" class="btn btn-sm btn-gold">Enviar CV</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ COLABORADORES ══════════════════════════════════ -->
+  <section class="section" id="colaboradores">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag">Alianzas estratégicas</span>
+        <h2 class="section-title">Nuestros <span class="gold">Colaboradores</span></h2>
+        <p class="section-sub">Trabajamos con instituciones y servicios que complementan nuestra oferta educativa.</p>
+      </div>
+
+      <div class="colab-grid reveal">
+
+        <div class="colab-card colab-link" onclick="window.open('https://www.sat.gob.mx/aplicacion/operacion/66288/consulta-tu-cfdiv40', '_blank')" title="Ir a Facturación Electrónica">
+          <div class="colab-placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M12 12v4M10 14h4"/></svg>
+          </div>
+          <span class="colab-label">Facturación Electrónica</span>
+          <span class="colab-sub">Portal SAT / CFDI</span>
+          <span class="colab-arrow">↗</span>
+        </div>
+
+        <div class="colab-card colab-link" onclick="window.open('https://www.sicrs.gob.mx', '_blank')" title="Ir a SICRS">
+          <div class="colab-placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <span class="colab-label">SICRS</span>
+          <span class="colab-sub">Sistema de Control Escolar</span>
+          <span class="colab-arrow">↗</span>
+        </div>
+
+        <div class="colab-card colab-add" onclick="window.location.href='#contacto'" title="Contactar para colaborar">
+          <div class="colab-add-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+          </div>
+          <span class="colab-label">Tu empresa aquí</span>
+          <span class="colab-sub">Contáctanos</span>
+        </div>
+
+        <div class="colab-card colab-add" onclick="window.location.href='#contacto'" title="Contactar para colaborar">
+          <div class="colab-add-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+          </div>
+          <span class="colab-label">Tu empresa aquí</span>
+          <span class="colab-sub">Contáctanos</span>
+        </div>
+
+      </div>
+
+      <p class="colab-nota reveal">¿Eres una empresa o institución interesada en colaborar con nosotros? <a href="#contacto">Contáctanos</a></p>
+    </div>
+  </section>
+
+  <!-- ══ CONTACTO ═══════════════════════════════════════ -->
+  <section class="section section-alt" id="contacto">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="tag">Estamos para ti</span>
+        <h2 class="section-title">Contácta<span class="gold">nos</span></h2>
+        <p class="section-sub">Resolvemos tus dudas y te guiamos en el proceso de inscripción.</p>
+      </div>
+
+      <div class="contacto-grid">
+
+        <div class="contacto-info reveal">
+          <div class="info-card">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            <div>
+              <h4>Dirección</h4>
+              <p>San Juan del Río, Querétaro<br>México</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            </div>
+            <div>
+              <h4>Teléfono</h4>
+              <p>+52 (427) 000-0000</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            </div>
+            <div>
+              <h4>Correo electrónico</h4>
+              <p>contacto@colegiorealdesantiago.mx</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            </div>
+            <div>
+              <h4>Horario de atención</h4>
+              <p>Lunes a Viernes<br>8:00 AM – 3:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contacto-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre completo</label>
+              <input type="text" placeholder="Tu nombre" required/>
+            </div>
+            <div class="form-group">
+              <label>Teléfono</label>
+              <input type="tel" placeholder="Tu número"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Correo electrónico</label>
+            <input type="email" placeholder="tu@correo.com" required/>
+          </div>
+          <div class="form-group">
+            <label>Asunto</label>
+            <select>
+              <option value="">Selecciona un asunto</option>
+              <option>Información de inscripción</option>
+              <option>Costos y becas</option>
+              <option>Vacantes docentes</option>
+              <option>Reglamento escolar</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-full">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+            Enviar mensaje
+          </button>
+          <p class="form-success" id="formSuccess">✓ ¡Mensaje enviado! Nos pondremos en contacto pronto.</p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ═════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Colegio Real"/>
+        <div>
+          <p class="footer-name">Colegio Real de Santiago</p>
+          <p class="footer-plantel">Plantel San Juan del Río</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <p class="footer-col-title">Navegación</p>
+        <a href="#inicio">Inicio</a>
+        <a href="#planteles">Planteles</a>
+        <a href="#acerca">Acerca de</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#reglamentos">Reglamentos</a>
+      </div>
+      <div class="footer-links">
+        <p class="footer-col-title">Servicios</p>
+        <a href="#costos">Costos</a>
+        <a href="#vacantes">Vacantes</a>
+        <a href="#colaboradores">Colaboradores</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-contact-col">
+        <p class="footer-col-title">Contacto</p>
+        <p>San Juan del Río, Querétaro</p>
+        <p>+52 (427) 000-0000</p>
+        <p>contacto@colegiorealdesantiago.mx</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Colegio Real de Santiago · Plantel San Juan del Río · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
